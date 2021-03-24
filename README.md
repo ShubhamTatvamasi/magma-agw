@@ -77,9 +77,10 @@ AGW$ sudo service magma@magmad restart
 
 check logs:
 ```bash
-sudo tail -f /var/log/syslog
+AGW$ sudo tail -f /var/log/syslog
 ```
 
+grab the hardware secrets off your AGW:
 ```
 AGW$ show_gateway_info.py
 ```
