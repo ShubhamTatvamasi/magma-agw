@@ -59,7 +59,7 @@ AGW$ cd /var/opt/magma/configs
 
 add control_proxy:
 ```
-AGW$ cat << EOF > control_proxy.yml
+AGW$ sudo cat << EOF > control_proxy.yml
 cloud_address: controller.magma.shubhamtatvamasi.com
 cloud_port: 443
 bootstrap_address: bootstrapper-controller.magma.shubhamtatvamasi.com
