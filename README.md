@@ -2,9 +2,7 @@
 
 ### Prerequisites
 
-[VirtualBox](https://www.virtualbox.org)
-
-[Vagrant](https://vagrantup.com)
+[VirtualBox](https://www.virtualbox.org) [Vagrant](https://vagrantup.com)
 
 ---
 
