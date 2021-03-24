@@ -81,10 +81,10 @@ AGW$ sudo tail -f /var/log/syslog
 
 grab the hardware secrets off your AGW:
 ```
-AGW$ cd magma/orc8r/gateway/python/
+AGW$ cd ~/magma/orc8r/gateway/python/
 AGW$ cp -r magma scripts
 AGW$ sudo pip3 install snowflake
-
+AGW$ cd scripts
 AGW$ ./show_gateway_info.py
 ```
 
