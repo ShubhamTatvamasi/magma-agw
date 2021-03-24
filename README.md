@@ -27,12 +27,12 @@ HOST$ vagrant box add magmacore/magma_dev \
 ```
 
 start vagrant box:
-```bash
+```
 HOST$ vagrant up magma
 ```
 
 ssh inside vagrant box and
-```bash
+```
 HOST$ vagrant ssh magma
 
 AGW$ cd magma/lte/gateway
@@ -58,7 +58,7 @@ AGW$ cd /var/opt/magma/configs
 ```
 
 add control_proxy:
-```bash
+```
 AGW$ cat << EOF > control_proxy.yml
 cloud_address: controller.magma.shubhamtatvamasi.com
 cloud_port: 443
@@ -76,12 +76,14 @@ AGW$ sudo service magma@magmad restart
 ```
 
 check logs:
-```bash
+```
 AGW$ sudo tail -f /var/log/syslog
 ```
 
 grab the hardware secrets off your AGW:
 ```
-AGW$ show_gateway_info.py
+AGW$ cd magma/orc8r/gateway/python/
+
+AGW$ ./scripts/show_gateway_info.py
 ```
 
