@@ -82,7 +82,7 @@ AGW$ sudo tail -f /var/log/syslog
 
 grab the hardware secrets off your AGW:
 ```
-AGW$ cd magma/orc8r/gateway/python/
+AGW$ cd ~/magma/orc8r/gateway/python/
 
 AGW$ ./scripts/show_gateway_info.py
 ```
