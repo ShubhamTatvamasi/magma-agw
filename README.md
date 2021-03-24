@@ -59,7 +59,7 @@ AGW$ cd /var/opt/magma/configs
 
 add control_proxy:
 ```
-AGW$ vim control_proxy.yml
+AGW$ sudo vim control_proxy.yml
 ```
 ```
 cloud_address: controller.magma.shubhamtatvamasi.com
