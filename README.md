@@ -55,12 +55,10 @@ Then, point your AGW to your Orchestrator:
 ```
 AGW$ sudo mkdir -p /var/opt/magma/configs
 AGW$ cd /var/opt/magma/configs
-```
-
-add control_proxy:
-```
 AGW$ sudo vim control_proxy.yml
 ```
+
+Put the following contents into the file:
 ```
 cloud_address: controller.magma.shubhamtatvamasi.com
 cloud_port: 443
