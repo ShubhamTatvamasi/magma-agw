@@ -72,6 +72,7 @@ Then restart your services to pick up the config changes:
 ```
 AGW$ sudo service magma@* stop
 AGW$ sudo service magma@magmad restart
+AGW$ sudo service magma@magmad status
 
 # check status of magma services
 AGW$ sudo systemctl status magma@*
@@ -80,6 +81,7 @@ AGW$ sudo systemctl status magma@*
 check logs:
 ```
 AGW$ sudo tail -f /var/log/syslog
+AGW$ sudo journalctl -u magma@magmad -f
 ```
 
 grab the hardware secrets off your AGW:
