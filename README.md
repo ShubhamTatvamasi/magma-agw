@@ -42,11 +42,16 @@ AGW$ make run
 
 ### Configure AWG
 
+Install scp plugin for Vagrant and copy the rootCA.pem file to AGW
+```
+HOST$ vagrant plugin install vagrant-scp
+HOST$ vagrant scp /tmp/rootCA.pem magma:~
+
+HOST$ vagrant ssh magma
+```
+
 First, copy the root CA for your Orchestrator deployment into your AGW:
 ```
-HOST$ scp -P 2222 -i ~/.vagrant.d/insecure_private_key rootCA.pem vagrant@127.0.0.1:~
-HOST$ vagrant ssh magma
-
 AGW$ sudo mkdir -p /var/opt/magma/certs/
 AGW$ sudo mv rootCA.pem /var/opt/magma/certs/rootCA.pem
 ```
