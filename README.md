@@ -72,6 +72,9 @@ Then restart your services to pick up the config changes:
 ```
 AGW$ sudo service magma@* stop
 AGW$ sudo service magma@magmad restart
+
+# check status of magma services
+AGW$ sudo systemctl status magma@*
 ```
 
 check logs:
