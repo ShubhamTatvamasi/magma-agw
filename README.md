@@ -8,21 +8,21 @@
 
 ### Build AGW
 
-download magma 1.4.0:
+download magma 1.5.0:
 ```
-HOST$ wget https://github.com/magma/magma/archive/refs/tags/v1.4.0.tar.gz
+HOST$ wget https://github.com/magma/magma/archive/refs/tags/v1.5.0.tar.gz
 ```
 
 extract and move to gateway folder: 
 ```
-HOST$ tar xvfz v1.4.0.tar.gz
-HOST$ cd magma-1.4.0/lte/gateway
+HOST$ tar xvfz v1.5.0.tar.gz
+HOST$ cd magma-1.5.0/lte/gateway
 ```
 
 download vagrant box:
 ```
 HOST$ vagrant box add magmacore/magma_dev \
-  --box-version=1.1.20201221 \
+  --box-version=1.1.20210326 \
   --provider=virtualbox
 ```
 
@@ -31,7 +31,7 @@ start vagrant box:
 HOST$ vagrant up magma
 ```
 
-ssh inside vagrant box and
+ssh inside vagrant box and build AGW:
 ```
 HOST$ vagrant ssh magma
 
@@ -90,4 +90,3 @@ AGW$ sudo pip3 install snowflake
 AGW$ cd scripts
 AGW$ ./show_gateway_info.py
 ```
-
