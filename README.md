@@ -91,9 +91,8 @@ AGW$ sudo journalctl -u magma@magmad -f
 
 grab the hardware secrets off your AGW:
 ```
-AGW$ cd ~/magma/orc8r/gateway/python/
-AGW$ cp -r magma scripts
 AGW$ sudo pip3 install snowflake
-AGW$ cd scripts
-AGW$ ./show_gateway_info.py
+AGW$ export AGW_SCRIPTS=/home/vagrant/magma/orc8r/gateway/python
+AGW$ ln -s ${AGW_SCRIPTS}/magma ${AGW_SCRIPTS}/scripts/
+AGW$ ${AGW_SCRIPTS}/scripts/show_gateway_info.py
 ```
