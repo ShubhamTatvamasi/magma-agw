@@ -111,6 +111,10 @@ Generate new Hardware ID:
 ```bash
 sudo rm /etc/snowflake
 sudo python3 -c 'import snowflake; snowflake.make_snowflake()'
+
 # sudo snowflake -m
+# help
+snowflake -h
+sudo snowflake --force-new-key
 ```
 
