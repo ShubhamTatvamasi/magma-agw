@@ -100,9 +100,16 @@ AGW$ ${AGW_SCRIPTS}/scripts/show_gateway_info.py
 
 ### Extras
 
-For getting new Challenge key:
+Generate new Challenge key:
 ```bash
 cd /var/opt/magma/certs
 sudo openssl ecparam -name secp384r1 -genkey -noout -out gw_challenge.key
 sudo chmod 644 gw_challenge.key
 ```
+
+Generate new Hardware ID:
+```bash
+sudo rm /etc/snowflake
+sudo python3 -c 'import snowflake; snowflake.make_snowflake()'
+```
+
