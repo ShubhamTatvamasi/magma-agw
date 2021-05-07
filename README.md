@@ -96,3 +96,13 @@ AGW$ export AGW_SCRIPTS=/home/vagrant/magma/orc8r/gateway/python
 AGW$ ln -s ${AGW_SCRIPTS}/magma ${AGW_SCRIPTS}/scripts/
 AGW$ ${AGW_SCRIPTS}/scripts/show_gateway_info.py
 ```
+---
+
+### Extras
+
+For getting new Challenge key:
+```bash
+cd /var/opt/magma/certs
+sudo openssl ecparam -name secp384r1 -genkey -noout -out gw_challenge.key
+sudo chmod 644 gw_challenge.key
+```
