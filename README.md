@@ -69,6 +69,8 @@ cloud_address: controller.magma.shubhamtatvamasi.com
 cloud_port: 443
 bootstrap_address: bootstrapper-controller.magma.shubhamtatvamasi.com
 bootstrap_port: 443
+fluentd_address: fluentd.magma.shubhamtatvamasi.com
+fluentd_port: 24224
 
 rootca_cert: /var/opt/magma/certs/rootCA.pem
 ```
