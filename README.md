@@ -119,4 +119,11 @@ sudo python3 -c 'import snowflake; snowflake.make_snowflake()'
 snowflake -h
 sudo snowflake --force-new-key
 ```
+---
+
+check certificate details:
+```bash
+openssl x509 -text -noout -in rootCA.pem
+```
+
 
