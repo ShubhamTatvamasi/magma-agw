@@ -124,6 +124,8 @@ sudo snowflake --force-new-key
 check certificate details:
 ```bash
 openssl x509 -text -noout -in rootCA.pem
+
+openssl x509 -text -noout -in /var/opt/magma/tmp/certs/rootCA.pem
 ```
 
 
