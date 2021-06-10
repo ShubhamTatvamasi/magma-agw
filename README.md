@@ -72,7 +72,7 @@ bootstrap_port: 443
 fluentd_address: fluentd.magma.shubhamtatvamasi.com
 fluentd_port: 24224
 
-rootca_cert: /var/opt/magma/certs/rootCA.pem
+rootca_cert: /var/opt/magma/tmp/certs/rootCA.pem
 ```
 
 Then restart your services to pick up the config changes:
