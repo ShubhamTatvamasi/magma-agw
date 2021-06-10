@@ -52,8 +52,8 @@ HOST$ vagrant ssh magma
 
 First, copy the root CA for your Orchestrator deployment into your AGW:
 ```
-AGW$ sudo mkdir -p /var/opt/magma/certs/
-AGW$ sudo mv rootCA.pem /var/opt/magma/certs/rootCA.pem
+AGW$ sudo mkdir -p /var/opt/magma/tmp/certs/
+AGW$ sudo mv rootCA.pem /var/opt/magma/tmp/certs/rootCA.pem
 ```
 
 Then, point your AGW to your Orchestrator:
