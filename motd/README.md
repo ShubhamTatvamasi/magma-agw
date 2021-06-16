@@ -3,5 +3,7 @@
 
 update welcome screen:
 ```bash
-cd /etc/update-motd.d
+wget https://raw.githubusercontent.com/ShubhamTatvamasi/magma-agw/master/motd/99-magma \
+  -P /etc/update-motd.d/
 ```
+
