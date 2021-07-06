@@ -98,6 +98,12 @@ AGW$ export AGW_SCRIPTS=/home/vagrant/magma/orc8r/gateway/python
 AGW$ ln -s ${AGW_SCRIPTS}/magma ${AGW_SCRIPTS}/scripts/
 AGW$ ${AGW_SCRIPTS}/scripts/show_gateway_info.py
 ```
+
+test network:
+```bash
+checkin_cli.py
+```
+
 ---
 
 ### Extras
