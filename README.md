@@ -119,6 +119,12 @@ sudo python3 -c 'import snowflake; snowflake.make_snowflake()'
 snowflake -h
 sudo snowflake --force-new-key
 ```
+
+remove gateway keys to reset AGW:
+```bash
+cd /var/opt/magma/certs
+sudo rm gateway.crt gateway.key
+```
 ---
 
 check certificate details:
