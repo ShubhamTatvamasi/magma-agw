@@ -43,33 +43,33 @@ build AGW
 cd magma/lte/gateway
 make run
 ```
+
+Install scp plugin for Vagrant and copy the rootCA.pem file to AGW
+```bash
+vagrant plugin install vagrant-scp
+vagrant scp /tmp/rootCA.pem magma:~
+
+vagrant ssh magma
+```
 ---
 
 ### Configure AGW
 
-Install scp plugin for Vagrant and copy the rootCA.pem file to AGW
-```
-HOST$ vagrant plugin install vagrant-scp
-HOST$ vagrant scp /tmp/rootCA.pem magma:~
-
-HOST$ vagrant ssh magma
-```
-
 First, copy the root CA for your Orchestrator deployment into your AGW:
-```
-AGW$ sudo mkdir -p /var/opt/magma/tmp/certs/
-AGW$ sudo mv rootCA.pem /var/opt/magma/tmp/certs/rootCA.pem
+```bash
+sudo mkdir -p /var/opt/magma/tmp/certs/
+sudo mv rootCA.pem /var/opt/magma/tmp/certs/rootCA.pem
 ```
 
 Then, point your AGW to your Orchestrator:
-```
-AGW$ sudo mkdir -p /var/opt/magma/configs
-AGW$ cd /var/opt/magma/configs
-AGW$ sudo vim control_proxy.yml
+```bash
+sudo mkdir -p /var/opt/magma/configs
+cd /var/opt/magma/configs
+sudo vim control_proxy.yml
 ```
 
 Put the following contents into the file:
-```
+```yaml
 cloud_address: controller.magma.shubhamtatvamasi.com
 cloud_port: 443
 bootstrap_address: bootstrapper-controller.magma.shubhamtatvamasi.com
@@ -81,27 +81,30 @@ rootca_cert: /var/opt/magma/tmp/certs/rootCA.pem
 ```
 
 Then restart your services to pick up the config changes:
-```
-AGW$ sudo service magma@* stop
-AGW$ sudo service magma@magmad restart
-AGW$ sudo service magma@magmad status
+```bash
+sudo service magma@* stop
+sudo service magma@magmad restart
+sudo service magma@magmad status
 
 # check status of magma services
-AGW$ sudo systemctl status magma@*
+sudo systemctl status magma@*
 ```
 
 check logs:
-```
-AGW$ sudo tail -f /var/log/syslog
-AGW$ sudo journalctl -u magma@magmad -f
+```bash
+sudo tail -f /var/log/syslog
+sudo journalctl -u magma@magmad -f
 ```
 
 grab the hardware secrets off your AGW:
-```
-AGW$ sudo pip3 install snowflake
-AGW$ export AGW_SCRIPTS=/home/vagrant/magma/orc8r/gateway/python
-AGW$ ln -s ${AGW_SCRIPTS}/magma ${AGW_SCRIPTS}/scripts/
-AGW$ ${AGW_SCRIPTS}/scripts/show_gateway_info.py
+```bash
+show_gateway_info.py
+
+# if above command doesn't work
+sudo pip3 install snowflake
+export AGW_SCRIPTS=/home/vagrant/magma/orc8r/gateway/python
+ln -s ${AGW_SCRIPTS}/magma ${AGW_SCRIPTS}/scripts/
+${AGW_SCRIPTS}/scripts/show_gateway_info.py
 ```
 
 test network:
