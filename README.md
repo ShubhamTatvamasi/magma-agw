@@ -6,41 +6,46 @@
 
 ---
 
-### Build AGW
+### Setup AGW
 
-download magma 1.5.0:
-```
-HOST$ wget https://github.com/magma/magma/archive/refs/tags/v1.5.0.tar.gz
+download magma repo:
+```bash
+git clone https://github.com/magma/magma.git --depth 1
 ```
 
-extract and move to gateway folder: 
-```
-HOST$ tar xvfz v1.5.0.tar.gz
-HOST$ cd magma-1.5.0/lte/gateway
+move to gateway folder: 
+```bash
+cd magma/lte/gateway
 ```
 
 download vagrant box:
-```
-HOST$ vagrant box add magmacore/magma_dev \
-  --box-version=1.1.20210326 \
+```bash
+vagrant box add magmacore/magma_dev \
+  --box-version=1.1.20210618 \
   --provider=virtualbox
 ```
 
 start vagrant box:
-```
-HOST$ vagrant up magma
+```bash
+vagrant up magma
 ```
 
-ssh inside vagrant box and build AGW:
-```
-HOST$ vagrant ssh magma
-
-AGW$ cd magma/lte/gateway
-AGW$ make run
+ssh inside vagrant box:
+```bash
+vagrant ssh magma
 ```
 ---
 
-### Configure AWG
+### Build AGW
+
+build AGW
+```bash
+cd magma/lte/gateway
+make run
+```
+---
+
+### Configure AGW
 
 Install scp plugin for Vagrant and copy the rootCA.pem file to AGW
 ```
