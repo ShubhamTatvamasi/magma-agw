@@ -125,6 +125,7 @@ sudo chmod 644 gw_challenge.key
 
 Generate new Hardware ID:
 ```bash
+sudo uuidgen > /etc/snowflake
 sudo snowflake --force-new-key
 ```
 
