@@ -2,6 +2,7 @@
 
 create `magma` user with `magma` password:
 ```bash
-sudo useradd -m magma -s /bin/bash -p $(echo magma | openssl passwd -1 -stdin)
+NEW_USER=magma
+sudo useradd -m $NEW_USER -s /bin/bash -p $(echo $NEW_USER | openssl passwd -1 -stdin)
 ```
 
