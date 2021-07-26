@@ -1,9 +1,8 @@
 # S1AP tests
 
-start vagrant boxes:
+start AGW and S1AP VMs:
 ```bash
-vagrant up magma
-vagrant up magma_test
+vagrant up magma magma_test
 ```
 ---
 
