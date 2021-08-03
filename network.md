@@ -33,7 +33,7 @@ netplan apply
 
 ### Debain
 
-Rename network interface in `/etc/network/interfaces`:
+Rename network interface in `/etc/network/interfaces`
 ```
 rename ens18=enp1s0
 rename ens19=enp2s0
