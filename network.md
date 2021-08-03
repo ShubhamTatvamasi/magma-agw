@@ -30,3 +30,18 @@ test and apply:
 netplan try
 netplan apply
 ```
+
+### Debain
+
+Rename network interface in `/etc/network/interfaces`:
+```
+rename ens18=enp1s0
+rename ens19=enp2s0
+```
+
+Restart the networking service:
+```bash
+service networking restart
+```
+
+
