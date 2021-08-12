@@ -25,6 +25,11 @@ vagrant box add magmacore/magma_dev \
   --provider=virtualbox
 ```
 
+install ansible:
+```bash
+sudo apt install ansible
+```
+
 start vagrant box:
 ```bash
 vagrant up magma
