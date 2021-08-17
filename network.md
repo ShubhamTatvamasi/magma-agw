@@ -39,9 +39,13 @@ rename ens18=enp1s0
 rename ens19=enp2s0
 ```
 
-Restart the networking service:
+restart network
 ```bash
-service networking restart
+sudo systemctl restart networking
 ```
 
+update MME IP
+```bash
+vim /etc/network/interfaces.d/eth1
+```
 
