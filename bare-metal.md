@@ -1,5 +1,10 @@
 # bare-metal
 
+check that we should have 2 network interface:
+```bash
+ip a
+```
+
 become root and download agw installer:
 ```bash
 sudo su
