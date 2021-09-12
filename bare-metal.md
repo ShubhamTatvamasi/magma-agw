@@ -13,7 +13,7 @@ wget https://raw.githubusercontent.com/magma/magma/v1.6/lte/gateway/deploy/agw_i
 
 install agw with static IP and it's gateway:
 ```bash
-bash agw_install_ubuntu.sh 192.168.4.14/24 192.168.4.1
+bash agw_install_ubuntu.sh 192.168.5.56/24 192.168.5.1
 ```
 
 check installation process:
