@@ -4,11 +4,5 @@
 
 enable on auto start:
 ```bash
-sudo crontab -e
+sudo systemctl enable wg-quick@Shubham
 ```
-```
-@reboot wg-quick up Shubham_HP
-@reboot ip route del default
-@reboot ip route add default via 192.168.122.1 dev eth0
-```
-
