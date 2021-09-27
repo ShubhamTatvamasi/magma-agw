@@ -7,6 +7,6 @@ while true; do \
   MME_MEMORY_USED="$(sudo pmap -d ${MME_PROCESS_ID} | tail -n 1)" \
   echo "$(date '+%m/%d/%Y %H:%M:%S') -- ${MME_MEMORY_USED}" | tee -a mme-pmap.logs; \
   sleep 2; \
-  done
+done
 ```
 
