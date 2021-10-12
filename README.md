@@ -139,6 +139,12 @@ remove gateway keys to reset AGW:
 cd /var/opt/magma/certs
 sudo rm gateway.crt gateway.key
 ```
+
+remove old network config:
+```bash
+cd /var/opt/magma/configs
+rm gateway.mconfig
+```
 ---
 
 check certificate details:
