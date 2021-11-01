@@ -143,7 +143,7 @@ sudo rm gateway.crt gateway.key
 remove old network config:
 ```bash
 cd /var/opt/magma/configs
-rm gateway.mconfig
+sudo rm gateway.mconfig
 ```
 ---
 
