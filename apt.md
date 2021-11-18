@@ -2,7 +2,7 @@
 
 add latest magma AGW repo:
 ```bash
-sudo echo "deb https://artifactory.magmacore.org/artifactory/debian-test focal-ci main" >> \
+sudo echo "deb https://artifactory.magmacore.org/artifactory/debian-test focal-ci main" > \
   /etc/apt/sources.list.d/magma.list
 ```
 
