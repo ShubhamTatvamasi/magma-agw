@@ -17,8 +17,7 @@ update eth1 interface `vim agw_install_ubuntu.sh`
   echo "auto eth1
   iface eth1 inet static
   address 192.168.5.57
-  netmask 255.255.255.0
-  gateway 192.168.5.1" > "$INTERFACE_DIR"/eth1
+  netmask 255.255.255.0" > "$INTERFACE_DIR"/eth1
 ```
 
 install agw with static IP and it's gateway:
