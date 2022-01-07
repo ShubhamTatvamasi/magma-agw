@@ -134,16 +134,11 @@ sudo uuidgen > /etc/snowflake
 sudo snowflake --force-new-key
 ```
 
-remove gateway keys to reset AGW:
+remove gateway keys and network config:
 ```bash
-cd /var/opt/magma/certs
-sudo rm gateway.crt gateway.key
-```
-
-remove old network config:
-```bash
-cd /var/opt/magma/configs
-sudo rm gateway.mconfig
+sudo rm /var/opt/magma/certs/gateway.crt gateway.key
+sudo rm /var/opt/magma/certs/gateway.key
+sudo rm /var/opt/magma/configs/gateway.mconfig
 ```
 ---
 
