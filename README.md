@@ -136,7 +136,7 @@ sudo snowflake --force-new-key
 
 remove gateway keys and network config:
 ```bash
-sudo rm /var/opt/magma/certs/gateway.crt gateway.key
+sudo rm /var/opt/magma/certs/gateway.crt
 sudo rm /var/opt/magma/certs/gateway.key
 sudo rm /var/opt/magma/configs/gateway.mconfig
 ```
