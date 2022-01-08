@@ -98,7 +98,7 @@ sudo systemctl status magma@*
 check logs:
 ```bash
 sudo tail -f /var/log/syslog
-sudo journalctl -u magma@magmad -f
+sudo journalctl -fu magma@magmad
 ```
 
 grab the hardware secrets off your AGW:
