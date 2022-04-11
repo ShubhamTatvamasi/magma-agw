@@ -131,6 +131,8 @@ sudo chmod 644 gw_challenge.key
 
 # Generate Public key
 openssl ec -in gw_challenge.key -pubout -out gw_challenge.pem
+GW_CHALLENGE=$(cat gw_challenge.pem | sed '5d' | sed '1d' | tr -d '\n')
+echo ${GW_CHALLENGE}
 ```
 
 Generate new Hardware ID:
