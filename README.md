@@ -124,8 +124,13 @@ checkin_cli.py
 Generate new Challenge key:
 ```bash
 cd /var/opt/magma/certs
+
+# Generate Private key
 sudo openssl ecparam -name secp384r1 -genkey -noout -out gw_challenge.key
 sudo chmod 644 gw_challenge.key
+
+# Generate Public key
+openssl ec -in gw_challenge.key -pubout -out gw_challenge.pem
 ```
 
 Generate new Hardware ID:
