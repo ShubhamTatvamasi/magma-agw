@@ -13,3 +13,9 @@ SSH into vm:
 ```bash
 multipass shell magma
 ```
+
+delete vm:
+```bash
+multipass delete magma
+multipass purge
+```
