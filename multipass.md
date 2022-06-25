@@ -9,3 +9,7 @@ multipass launch focal \
   --cpus 2
 ```
 
+SSH into vm:
+```bash
+multipass shell magma
+```
