@@ -14,6 +14,11 @@ SSH into vm:
 multipass shell magma
 ```
 
+Check if VM is running:
+```bash
+multipass list
+```
+
 delete vm:
 ```bash
 multipass delete magma
