@@ -17,3 +17,8 @@ network:
       addresses:
       - 10.0.2.3/24
 ```
+
+Apply chnages:
+```bash
+sudo netplan apply
+```
