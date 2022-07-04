@@ -1,5 +1,10 @@
 # Ubuntu Desktop Libvirt
 
+Update network config:
+```bash
+sudo vim /etc/netplan/01-network-manager-all.yaml
+```
+
 Setup bridge network:
 ```yaml
 # Let NetworkManager manage all devices on this system
