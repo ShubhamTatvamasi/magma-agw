@@ -15,5 +15,5 @@ network:
       interfaces:
       - enp4s0
       addresses:
-      - 192.168.150.2/24
+      - 10.0.2.3/24
 ```
