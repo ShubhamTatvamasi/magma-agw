@@ -53,7 +53,7 @@ print_data "Subscribers connected: $(mobility_cli.py get_subscriber_table | tail
 echo $line
 for service in $(systemctl list-units --all | grep -oP "(?<=magma@)([a-z_]*)(?=\.service)")
 do
-	print_data_padded "$service: $(systemctl is-active magma@$service) ($(systemctl status magma@$service | grep -Po ".*; \K(.*)(?= ago)"))" 35
+	print_data_padded "$service: $(systemctl is-active magma@$service)" 35
 done
 echo $line
 echo ""
