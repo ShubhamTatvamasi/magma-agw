@@ -6,7 +6,7 @@ multipass launch focal \
   --name magma \
   --disk 40G \
   --mem 4G \
-  --cpus 2 \
+  --cpus 4 \
   --network en0
 ```
 
