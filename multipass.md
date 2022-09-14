@@ -5,8 +5,9 @@ Create instance:
 multipass launch focal \
   --name magma \
   --disk 40G \
-  --mem 2G \
-  --cpus 2
+  --mem 4G \
+  --cpus 2 \
+  --network en0
 ```
 
 SSH into vm:
