@@ -2,8 +2,8 @@
 
 Install Yq:
 ```bash
-add-apt-repository --yes ppa:rmescandon/yq
-apt install yq
+sudo add-apt-repository --yes ppa:rmescandon/yq
+sudo apt install yq
 ```
 
 Check if the ping is blocked:
